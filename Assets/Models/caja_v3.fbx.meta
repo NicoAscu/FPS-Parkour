@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13199633b72755b4ab5ea66609b47033
+guid: 609587be12107674094a41cc66ef74b7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,17 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Caja
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Caja
-    second: {fileID: 2100000, guid: 2bb85a44599f1de41b4d94f71d924119, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: crate
-    second: {fileID: 2800000, guid: c13fd22c335ce2a4586b81a775f2edd9, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

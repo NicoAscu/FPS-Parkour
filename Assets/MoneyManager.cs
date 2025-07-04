@@ -5,16 +5,26 @@ using UnityEngine;
 public class MoneyManager : MonoBehaviour
 {
     public float money;
+    public UIManager uiManager;
 
-    public void UpdateMoney(float amount)
+    void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
+
+    public bool UpdateMoney(float amount)
     {
         if (money + amount < 0)
         {
-            //impedir compra
-            Debug.Log("dinero insuficiente");
+            //impedir la compra
+            Debug.Log("Dinero insuficiente");
+            return false;
         }
         else
-        money += amount;
+        {
+            money += amount;
+            uiManager.UpdateMoneyText(money.ToString());
+            return true;
+        }
     }
-  
 }

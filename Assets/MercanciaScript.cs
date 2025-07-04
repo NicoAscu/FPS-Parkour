@@ -7,18 +7,19 @@ public class MercanciaScript : MonoBehaviour
     public float cost = 5;
     public MoneyManager moneyManager;
 
-    private void Start()
+    void Start()
     {
         moneyManager = FindObjectOfType<MoneyManager>();
     }
-
+    
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            moneyManager.UpdateMoney(-cost);
-            Destroy(gameObject);
+            if (moneyManager.UpdateMoney(-cost))
+            {
+                Destroy(gameObject);
+            }
         }
     }
-
 }
