@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6e35069b4e3f924dae6ca24119bb1d7
+guid: 69766523a1a5a3c4eabd838852541810
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,12 +14,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Barril
-    second: {fileID: 2100000, guid: 1be3f556be247f14fa52bde180db2221, type: 2}
+    second: {fileID: 2100000, guid: 4bb29767cdfd11346ad501ba14657c5b, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: barril textura 3
-    second: {fileID: 2800000, guid: a571b0cd6abdfd740ae0ed9219fe8c04, type: 3}
+    second: {fileID: 2800000, guid: eb3d6f172233de443ba929c9682bd1a2, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

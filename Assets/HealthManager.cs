@@ -2,29 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthManager : MonoBehaviour
+public class healthManager : MonoBehaviour
 {
-    public int healthPoints;
+
+    public int health;
     public UIManager uiManager;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
     }
 
-    public bool HealthUpdate(int damageAmount)
+    public bool UpdateHealth(int damageAmount)
     {
-        if (healthPoints <= damageAmount)
+        if(health <= damageAmount)
         {
-            Debug.Log("Game over");
+            Debug.Log("Game Over");
             return false;
         }
-        healthPoints += damageAmount;
-        uiManager.UpdateHealthText(healthPoints.ToString());
+        health += damageAmount;
+        uiManager.UpdateHealthText(health.ToString());
         return true;
     }
-
-
-
 }

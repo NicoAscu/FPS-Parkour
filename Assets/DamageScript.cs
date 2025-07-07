@@ -1,29 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DamageScript : MonoBehaviour
 {
     public int damage = 5;
-    public HealthManager healthManager;
-    private void Start()
+    public healthManager HealthManager;
+
+    void Start()
     {
-        healthManager = FindObjectOfType<HealthManager>();
+        HealthManager = FindObjectOfType<healthManager>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("p");
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (healthManager.HealthUpdate(-damage))
+            if (HealthManager.UpdateHealth(-damage))
             {
-                Destroy(gameObject);
-            }
-            else
-            {
-                SceneManager.LoadScene("FPS Parkour");
+                Debug.Log("Sufriste 5 de daño");
             }
         }
     }

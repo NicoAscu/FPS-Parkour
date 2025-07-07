@@ -9,9 +9,9 @@ public class MercanciaScript : MonoBehaviour
 
     void Start()
     {
-        moneyManager = FindObjectOfType<MoneyManager>();
+        moneyManager = FindObjectOfType <MoneyManager>();
     }
-    
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

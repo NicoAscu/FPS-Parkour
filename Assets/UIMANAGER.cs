@@ -5,19 +5,19 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    //DInero
     public TextMeshProUGUI txtMoney;
-    public TextMeshProUGUI txtHealth;
-    public MoneyManager moneyManager;
-    public HealthManager healthManager;
 
     public void UpdateMoneyText(string money)
     {
         txtMoney.text = "$" + money;
-        txtHealth.text = "HP " + healthManager.healthPoints.ToString();
     }
 
-    public void UpdateHealthText(string health)
+    // Health
+    public TextMeshProUGUI txtHealth;
+   
+    public void UpdateHealthText (string health)
     {
-        txtHealth.text = health;
+        txtHealth.text = health + "HP";
     }
 }
