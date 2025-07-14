@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class healthManager : MonoBehaviour
 {
@@ -15,12 +16,13 @@ public class healthManager : MonoBehaviour
 
     public bool UpdateHealth(int damageAmount)
     {
-        if(health <= damageAmount)
+        health += damageAmount;
+        if(health <= 0)
         {
             Debug.Log("Game Over");
+            SceneManager.LoadScene("FPS PARKOUR");
             return false;
         }
-        health += damageAmount;
         uiManager.UpdateHealthText(health.ToString());
         return true;
     }
